@@ -7,12 +7,14 @@
 const nameInput = document.getElementById('name');
 //On load
 nameInput.focus();
-console.log(nameInput);
+
+/*************************
+ END Focus on first input field
+**************************/
 
 /*************************
  Job Role
 **************************/
-
 
 //Set OtherJobRoleField
 const otherJobRoleField = document.getElementById('other-job-role');
@@ -64,10 +66,10 @@ jobRoleField.addEventListener('change', (event) => {
        }
 
     }
-    
-    
   })
-
+/*************************
+ END Job Role
+**************************/
 /***************************************************************************
  Main conference have to be checked first before workshops is open
 ****************************************************************************/
@@ -89,23 +91,15 @@ function mainConferenceCheckedOpenWorkShops(){
                 workShops[i].setAttribute('disabled', 'disabled')
                 })
         }
-    
-
-        
-      
       });
-
 
 }
 
 mainConferenceCheckedOpenWorkShops();
 
 function workShopCheckedDisableSameTimeSlot(){
-
     const workShops = document.querySelectorAll('#activities-box input[data-day-and-time]');
-
-    Object.keys(workShops).forEach(function(i) {
-        
+    Object.keys(workShops).forEach(function(i) {   
             workShops[i].addEventListener('click', (e) => {
                 if(workShops[i].checked == true){
                 
@@ -124,7 +118,6 @@ function workShopCheckedDisableSameTimeSlot(){
                     }
                 }
             })
-        
         })
     
 }
@@ -132,15 +125,15 @@ workShopCheckedDisableSameTimeSlot();
 
 function deactivateSameTimeSlot(timeslot, name, workShop){ 
     const workShops = document.querySelectorAll('#activities-box input[data-day-and-time]');
-    console.log('workShops: ' + workShop.checked)
-
     Object.keys(workShops).forEach(function(i) {
         if(timeslot == workShops[i].getAttribute('data-day-and-time') && name != workShops[i].getAttribute('name') && workShops[i].checked == false){
             workShops[i].setAttribute('disabled', 'disabled');
         }
     })
-    
-
 }
+
+/***************************************************************************
+ END: Main conference have to be checked first before workshops is open
+****************************************************************************/
 
  

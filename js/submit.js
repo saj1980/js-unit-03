@@ -9,23 +9,7 @@ const asterisk = document.querySelectorAll('.asterisk');
 
 submit.addEventListener('click', function(e) {
     e.preventDefault();
-    
-    
-    // Object.keys(asterisk).forEach(function(i) {
-    //     //console.log('Value '+asterisk[i]);
-    //         if(asterisk[i]){
-                
-    //             asterisk[i].classList.add("red");
-    //             //asterisk[i].classList.add("red");
-    //             asterisk[i].parentElement.classList.add("red");
-    //             //console.log(asterisk[i]);
-    //             console.log('Hvad er dette: '+asterisk[i]);
-    //         }  
-        
-         
 
-       
-    // });
 
     Object.keys(error).forEach(function(i) {
         console.log('Value '+error[i].value);

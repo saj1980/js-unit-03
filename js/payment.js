@@ -23,10 +23,4 @@ payment.addEventListener('change', (event) => {
     }
  });
 
-// payment.addEventListener('change', togglePaypal());
-
-// function togglePaypal(){
-//     //paypal.removeAttribute('hidden')
-//     alert('hi')
-// }
 
