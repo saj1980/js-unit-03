@@ -11,7 +11,7 @@ const patterns = {
     ["other-job-role"]: /^[a-z ,.'-]+$/i
 }
 function validate(field, regex){
-
+//
     if(regex.test(field.value)){
         field.className = '';
         //field.parentElement.classList.remove("red")
