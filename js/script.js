@@ -1,10 +1,18 @@
+/*************************
+ Focus on first input field
+**************************/
+
 
 //Set name field
 const nameInput = document.getElementById('name');
 //On load
 nameInput.focus();
-
 console.log(nameInput);
+
+/*************************
+ Job Role
+**************************/
+
 
 //Set OtherJobRoleField
 const otherJobRoleField = document.getElementById('other-job-role');
@@ -60,7 +68,9 @@ jobRoleField.addEventListener('change', (event) => {
     
   })
 
-//HELPER FUNCTIONS**********
+/***************************************************************************
+ Main conference have to be checked first before workshops is open
+****************************************************************************/
 
 function mainConferenceCheckedOpenWorkShops(){
     const workShops = document.querySelectorAll('#activities-box input[data-day-and-time]');
@@ -132,36 +142,5 @@ function deactivateSameTimeSlot(timeslot, name, workShop){
     
 
 }
-
-
-
-// function deactivateWorkshopsOnSameTime(timeslot){
-//     const workShops = activityBox.getElementsByTagName('input');
-//     //console.log('Inside DeactivateWorkshopSametime Function: '+ workShops[0].checked)
-    
-//     for(let i = 0; i < workShops.length; i++){
-//         console.log('Indside function: ' + workShops[i].checked)
-//         if(!workShops[i].checked){
-//             //console.log(workShops[i].checked);
-//             //console.log('Indside Forloop: '+workShops[i].checked)
-//             if(timeslot == workShops[i].getAttribute('data-day-and-time')){
-//                 workShops[i].setAttribute('disabled', 'disabled')
-//             }
-//         } else{
-//             //console.log('inside unchecked')
-//             //console.log(workShops[i].checked);
-//             //console.log('Indside Forloop: '+workShops[i].checked)
-//             // if(timeslot == workShops[i].getAttribute('data-day-and-time')){
-//             //     workShops[i].removeAttribute('disabled')
-//             // }
-//             //alert(workShops)
-//             workShops[i].removeAttribute('disabled')
-//         } 
-//     }
-    
-// }
-
-//
-//deactivateWorkshopsOnSameTime('Tuesday 9am-12pm')
 
  
