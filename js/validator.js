@@ -1,4 +1,6 @@
 const inputs = document.querySelectorAll('input');
+const headline = document.querySelectorAll('#activities')[0];
+
 
 
 const patterns = {
@@ -11,11 +13,13 @@ const patterns = {
     ["other-job-role"]: /^[a-z ,.'-]+$/i
 }
 function validate(field, regex){
-
+//test
     if(regex.test(field.value)){
         field.className = '';
+        field.parentElement.classList.remove("not-valid")
     } else {
-        field.classList.add("red")
+        field.parentElement.classList.add("not-valid")
+        //field.parentElement.classList.add("red")
     }
 }
  
@@ -27,5 +31,11 @@ function validate(field, regex){
             }
      })
  });
+
+ headline.addEventListener('change', function(){
+     headline.classList.remove('not-valid')
+ })
+
+
 
  

@@ -3,8 +3,6 @@ const creditCard = document.getElementById('credit-card');
 const bitcoin = document.getElementById('bitcoin');
 const payment = document.getElementById('payment');
 
-console.log(payment.value)
-
 payment.addEventListener('change', (event) => {
     console.log(event.target.value)
     if(event.target.value == 'paypal'){
