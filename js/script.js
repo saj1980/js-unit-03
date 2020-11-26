@@ -1,12 +1,18 @@
 /*************************
- Focus on first input field
+ Focus on first input field AND Creditcard field selected
 **************************/
 
 
 //Set name field
 const nameInput = document.getElementById('name');
+
 //On load
 nameInput.focus();
+
+
+document.getElementById('payment').children[1].selected="selected";
+
+
 
 /*************************
  END Focus on first input field
@@ -49,16 +55,17 @@ jobRoleField.addEventListener('change', (event) => {
     // set value of designThemeField
     const designValue = e.target.value;
 
-    
-    console.log(color.options[1]);
+
 
     for(let i=0; i < color.options.length; i++){
        //set attribute 
        const colorAttribute = color.options[i].getAttribute("data-theme");
+       
     
 
        // If attribute does not match designValue add hidden attribute
        if(colorAttribute != designValue){
+        color.options[0].selected = true;
         color.options[i].setAttribute("hidden", 'hidden');
        } else {
            // Else remove hidden
@@ -108,7 +115,7 @@ function workShopCheckedDisableSameTimeSlot(){
     
                 deactivateSameTimeSlot(timeSlot, name, workShops[i])
                 } else {
-                    console.log(workShops[i].getAttribute('data-day-and-time'));
+                    //console.log(workShops[i].getAttribute('data-day-and-time'));
                     const timeslotValue = workShops[i].getAttribute('data-day-and-time'); 
                     const timeSlot = document.querySelectorAll(`[data-day-and-time="${timeslotValue}"]`);
                     

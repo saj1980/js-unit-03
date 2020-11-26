@@ -7,7 +7,7 @@ let totalCost = 0;
 
 
 activityCost.forEach(function(input, key){
-    console.log(input.getAttribute('data-cost')); 
+    //console.log(input.getAttribute('data-cost')); 
     input.addEventListener('change', function(e){
         //console.log('Value checked: '+e.target); 
         if(e.target.checked){
