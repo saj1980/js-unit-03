@@ -5,7 +5,7 @@ const headline = document.querySelectorAll('#activities')[0];
 
 const patterns = {
     ["user-name"]: /^[a-z ,.'-]+$/i,
-    ["user-email"]: /^\S+@\S+\.\S+$/,
+    ["user-email"]: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
     ["user-title"]: /^[a-z\d]{5,12}$/i,
     ["user-cc-num"]: /^[\d]{13,16}$/i,
     ["user-zip"]: /^[\d]{5,12}$/i,
