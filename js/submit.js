@@ -1,4 +1,4 @@
-const submit = document.querySelector('button[type="submit"]');
+const submit = document.querySelector('form');
 const name = document.querySelector('#name');
 const email = document.querySelector('#email');
 const ccNum = document.querySelector('#cc-num');
@@ -12,13 +12,13 @@ const submitpatterns = {
     ["user-email"]: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
     ["user-title"]: /^[a-z\d]{5,12}$/i,
     ["user-cc-num"]: /^[\d]{13,16}$/i,
-    ["user-zip"]: /^[\d]{5,12}$/i,
+    ["user-zip"]: /^[\d]{5}$/i,
     ["user-cvv"]: /^[\d]{3}$/,
     ["other-job-role"]: /^[a-z ,.'-]+$/i
 }
 
 
-submit.addEventListener('click', function(e) {
+submit.addEventListener('submit', function(e) {
     e.preventDefault();
 
     let error=0; 
